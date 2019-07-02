@@ -94,18 +94,18 @@
 
 
 
-  <meta name="description" content="数据库必须具备的四个特性1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚;成功必须要完全应用到数据库，失败则不能对数据库产生影响；2：一致性：事务执行前和执行后必须处于一致性状态， 例：用户A和用户B的前加起来一共是5000; 无论AB用户之间是如何相互转换的，事务结束后两个用户的钱加起来还是5000,这就是事务的一致性。 3：隔离性：当多个用户并发访问数据库时，数据库为每一个用户开启">
-<meta name="keywords" content="blogs">
+  <meta name="description" content="重新温习下事务,隔离级别">
+<meta name="keywords" content="事务">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jun">
+<meta property="og:title" content="数据库必须具备的四个特性">
 <meta property="og:url" content="http://yoursite.com/2019/07/02/事务的四大特性/index.html">
 <meta property="og:site_name" content="jun">
-<meta property="og:description" content="数据库必须具备的四个特性1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚;成功必须要完全应用到数据库，失败则不能对数据库产生影响；2：一致性：事务执行前和执行后必须处于一致性状态， 例：用户A和用户B的前加起来一共是5000; 无论AB用户之间是如何相互转换的，事务结束后两个用户的钱加起来还是5000,这就是事务的一致性。 3：隔离性：当多个用户并发访问数据库时，数据库为每一个用户开启">
+<meta property="og:description" content="重新温习下事务,隔离级别">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-02T05:29:11.406Z">
+<meta property="og:updated_time" content="2019-07-02T05:36:24.895Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jun">
-<meta name="twitter:description" content="数据库必须具备的四个特性1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚;成功必须要完全应用到数据库，失败则不能对数据库产生影响；2：一致性：事务执行前和执行后必须处于一致性状态， 例：用户A和用户B的前加起来一共是5000; 无论AB用户之间是如何相互转换的，事务结束后两个用户的钱加起来还是5000,这就是事务的一致性。 3：隔离性：当多个用户并发访问数据库时，数据库为每一个用户开启">
+<meta name="twitter:title" content="数据库必须具备的四个特性">
+<meta name="twitter:description" content="重新温习下事务,隔离级别">
 
 
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title> | jun</title>
+  <title>数据库必须具备的四个特性 | jun</title>
   
 
 
@@ -191,7 +191,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -218,7 +218,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
         
@@ -234,7 +234,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter</a>
 
   </li>
         
@@ -250,7 +250,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
 
   </li>
         
@@ -266,7 +266,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
 
@@ -335,7 +335,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">数据库必须具备的四个特性
 
               
             
@@ -354,14 +354,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Created: 2019-07-02 13:27:05 / Modified: 13:29:11" itemprop="dateCreated datePublished" datetime="2019-07-02T13:27:05+08:00">2019-07-02</time>
+              <time title="Erstellt: 2019-07-02 13:27:05 / Geändert am: 13:36:24" itemprop="dateCreated datePublished" datetime="2019-07-02T13:27:05+08:00">2019-07-02</time>
             
 
             
@@ -372,6 +372,24 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -385,6 +403,8 @@
 
           
 
+          
+            <div class="post-description">重新温习下事务,隔离级别</div>
           
 
         </div>
@@ -400,7 +420,7 @@
       
 
       
-        <h2 id="数据库必须具备的四个特性"><a href="#数据库必须具备的四个特性" class="headerlink" title="数据库必须具备的四个特性"></a>数据库必须具备的四个特性</h2><h4 id="1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚-成功必须要完全应用到数据库，失败则不能对数据库产生影响；"><a href="#1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚-成功必须要完全应用到数据库，失败则不能对数据库产生影响；" class="headerlink" title="1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚;成功必须要完全应用到数据库，失败则不能对数据库产生影响；"></a>1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚;成功必须要完全应用到数据库，失败则不能对数据库产生影响；</h4><p><strong>2：一致性：事务执行前和执行后必须处于一致性状态，</strong></p>
+        <h4 id="1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚-成功必须要完全应用到数据库，失败则不能对数据库产生影响；"><a href="#1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚-成功必须要完全应用到数据库，失败则不能对数据库产生影响；" class="headerlink" title="1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚;成功必须要完全应用到数据库，失败则不能对数据库产生影响；"></a>1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚;成功必须要完全应用到数据库，失败则不能对数据库产生影响；</h4><p><strong>2：一致性：事务执行前和执行后必须处于一致性状态，</strong></p>
 <p>例：用户A和用户B的前加起来一共是5000; 无论AB用户之间是如何相互转换的，事务结束后两个用户的钱加起来还是5000,这就是事务的一致性。</p>
 <p><strong>3：隔离性：当多个用户并发访问数据库时，数据库为每一个用户开启的事务，不被其他事务的操作所干扰，多个并发事务之间要相互隔离；</strong></p>
 <p><strong>4：持久性：一个事务一旦被提交了，那么对数据库中的数据的改变就是永久性的，即便在数据库系统遇到故障的情况下也不会丢失事物的操作。</strong></p>
@@ -432,6 +452,15 @@
     
 
     <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/事务/" rel="tag"># 事务</a>
+          
+        </div>
       
 
       
@@ -496,10 +525,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -520,7 +549,7 @@
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">6</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -538,8 +567,10 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">categories</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">Kategorien</span>
                   
                 </div>
               
@@ -563,8 +594,10 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
-                    <span class="site-state-item-name">tags</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">schlagwörter</span>
                   
                 </div>
               
@@ -627,7 +660,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库必须具备的四个特性"><span class="nav-number">1.</span> <span class="nav-text">数据库必须具备的四个特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚-成功必须要完全应用到数据库，失败则不能对数据库产生影响；"><span class="nav-number">1.0.1.</span> <span class="nav-text">1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚;成功必须要完全应用到数据库，失败则不能对数据库产生影响；</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隔离性：当多个线程都开启事务来操作数据库中的数据时，数据库系统要进行隔离操作，以保证各个线程获取数据的准确性。-不考虑事务的隔离性，会产生的几种问题："><span class="nav-number">1.1.</span> <span class="nav-text">隔离性：当多个线程都开启事务来操作数据库中的数据时，数据库系统要进行隔离操作，以保证各个线程获取数据的准确性。 不考虑事务的隔离性，会产生的几种问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#01：脏读"><span class="nav-number">1.1.1.</span> <span class="nav-text">01：脏读</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#是指一个事务处理过程里读取了另一个未提交的事务中的数据，然后使用了这个数据；-例：用户A向用户B转账100元，A通知B查看账户，B发现前确实已到账，而之后无论第二条SQL是否执行，只要该事务部提交，则所有操作都将回滚，当B再次查看账户时就会发现前其实并没有到账。"><span class="nav-number">1.1.2.</span> <span class="nav-text">是指一个事务处理过程里读取了另一个未提交的事务中的数据，然后使用了这个数据； 例：用户A向用户B转账100元，A通知B查看账户，B发现前确实已到账，而之后无论第二条SQL是否执行，只要该事务部提交，则所有操作都将回滚，当B再次查看账户时就会发现前其实并没有到账。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#02：不可重复读-不可重复读是指在一个事务内，多次读取同一个数据，在这个事务还没有结束-，另一个事务也访问该同一数据，但是由于第二个事务的修改，那么第一个事务两次读取的数据可能不一样，因此称为不可重复读；即同一个事务中原始数据读取不可重复。-注：不可重复读和脏读的区别，脏读是某一个事务读取另一个事务未提交的脏数据-不可重复读则是读取前一事务提"><span class="nav-number">1.1.3.</span> <span class="nav-text">02：不可重复读 不可重复读是指在一个事务内，多次读取同一个数据，在这个事务还没有结束 ，另一个事务也访问该同一数据，但是由于第二个事务的修改，那么第一个事务两次读取的数据可能不一样，因此称为不可重复读；即同一个事务中原始数据读取不可重复。 注：不可重复读和脏读的区别，脏读是某一个事务读取另一个事务未提交的脏数据; 不可重复读则是读取前一事务提</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#03：幻读：-当事务不是独立执行时发生的一种现象，例如第一个事务对一个表中的数据进行修改，这种数据涉及到表中的全部数据行，同时，第二个事务也对这个表数据进行修改，这个修改是对表中新增-删除一条数据，那么操作第一个事务的用户发现表中的数据还没有修改的数据行，就好像发生了幻觉一样，这就是发生了幻读。-注-幻读和不可重复读都读取另一条已经提交的事务，所不同的是不可重复读查询的都是同一数据项，而幻读针对的是一批数据整体。"><span class="nav-number">1.1.4.</span> <span class="nav-text">03：幻读： 当事务不是独立执行时发生的一种现象，例如第一个事务对一个表中的数据进行修改，这种数据涉及到表中的全部数据行，同时，第二个事务也对这个表数据进行修改，这个修改是对表中新增/删除一条数据，那么操作第一个事务的用户发现表中的数据还没有修改的数据行，就好像发生了幻觉一样，这就是发生了幻读。 注:幻读和不可重复读都读取另一条已经提交的事务，所不同的是不可重复读查询的都是同一数据项，而幻读针对的是一批数据整体。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库提供的四种隔离级别：-01：Read-uncommitted-读未提交-：最低级别，任何情况都会发生。-02：Read-Committed-读已提交-：可避免脏读的发生。-03：Repeatable-read-可重复读-：可避免脏读、不可重复读的发生。-04：Serializable-串行化-：避免脏读、不可重复读，幻读的发生。"><span class="nav-number">1.1.5.</span> <span class="nav-text">数据库提供的四种隔离级别： 01：Read uncommitted(读未提交)：最低级别，任何情况都会发生。 02：Read Committed(读已提交)：可避免脏读的发生。 03：Repeatable read(可重复读)：可避免脏读、不可重复读的发生。 04：Serializable(串行化)：避免脏读、不可重复读，幻读的发生。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下面就四种隔离级别进行场景设计："><span class="nav-number">1.1.6.</span> <span class="nav-text">下面就四种隔离级别进行场景设计：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚-成功必须要完全应用到数据库，失败则不能对数据库产生影响；"><span class="nav-number">1.</span> <span class="nav-text">1：原子性：事务包含的所有操作要么全部成功，要么全部失败回滚;成功必须要完全应用到数据库，失败则不能对数据库产生影响；</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#隔离性：当多个线程都开启事务来操作数据库中的数据时，数据库系统要进行隔离操作，以保证各个线程获取数据的准确性。-不考虑事务的隔离性，会产生的几种问题："><span class="nav-number"></span> <span class="nav-text">隔离性：当多个线程都开启事务来操作数据库中的数据时，数据库系统要进行隔离操作，以保证各个线程获取数据的准确性。 不考虑事务的隔离性，会产生的几种问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#01：脏读"><span class="nav-number">1.</span> <span class="nav-text">01：脏读</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#是指一个事务处理过程里读取了另一个未提交的事务中的数据，然后使用了这个数据；-例：用户A向用户B转账100元，A通知B查看账户，B发现前确实已到账，而之后无论第二条SQL是否执行，只要该事务部提交，则所有操作都将回滚，当B再次查看账户时就会发现前其实并没有到账。"><span class="nav-number">2.</span> <span class="nav-text">是指一个事务处理过程里读取了另一个未提交的事务中的数据，然后使用了这个数据； 例：用户A向用户B转账100元，A通知B查看账户，B发现前确实已到账，而之后无论第二条SQL是否执行，只要该事务部提交，则所有操作都将回滚，当B再次查看账户时就会发现前其实并没有到账。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#02：不可重复读-不可重复读是指在一个事务内，多次读取同一个数据，在这个事务还没有结束-，另一个事务也访问该同一数据，但是由于第二个事务的修改，那么第一个事务两次读取的数据可能不一样，因此称为不可重复读；即同一个事务中原始数据读取不可重复。-注：不可重复读和脏读的区别，脏读是某一个事务读取另一个事务未提交的脏数据-不可重复读则是读取前一事务提"><span class="nav-number">3.</span> <span class="nav-text">02：不可重复读 不可重复读是指在一个事务内，多次读取同一个数据，在这个事务还没有结束 ，另一个事务也访问该同一数据，但是由于第二个事务的修改，那么第一个事务两次读取的数据可能不一样，因此称为不可重复读；即同一个事务中原始数据读取不可重复。 注：不可重复读和脏读的区别，脏读是某一个事务读取另一个事务未提交的脏数据; 不可重复读则是读取前一事务提</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#03：幻读：-当事务不是独立执行时发生的一种现象，例如第一个事务对一个表中的数据进行修改，这种数据涉及到表中的全部数据行，同时，第二个事务也对这个表数据进行修改，这个修改是对表中新增-删除一条数据，那么操作第一个事务的用户发现表中的数据还没有修改的数据行，就好像发生了幻觉一样，这就是发生了幻读。-注-幻读和不可重复读都读取另一条已经提交的事务，所不同的是不可重复读查询的都是同一数据项，而幻读针对的是一批数据整体。"><span class="nav-number">4.</span> <span class="nav-text">03：幻读： 当事务不是独立执行时发生的一种现象，例如第一个事务对一个表中的数据进行修改，这种数据涉及到表中的全部数据行，同时，第二个事务也对这个表数据进行修改，这个修改是对表中新增/删除一条数据，那么操作第一个事务的用户发现表中的数据还没有修改的数据行，就好像发生了幻觉一样，这就是发生了幻读。 注:幻读和不可重复读都读取另一条已经提交的事务，所不同的是不可重复读查询的都是同一数据项，而幻读针对的是一批数据整体。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库提供的四种隔离级别：-01：Read-uncommitted-读未提交-：最低级别，任何情况都会发生。-02：Read-Committed-读已提交-：可避免脏读的发生。-03：Repeatable-read-可重复读-：可避免脏读、不可重复读的发生。-04：Serializable-串行化-：避免脏读、不可重复读，幻读的发生。"><span class="nav-number">5.</span> <span class="nav-text">数据库提供的四种隔离级别： 01：Read uncommitted(读未提交)：最低级别，任何情况都会发生。 02：Read Committed(读已提交)：可避免脏读的发生。 03：Repeatable read(可重复读)：可避免脏读、不可重复读的发生。 04：Serializable(串行化)：避免脏读、不可重复读，幻读的发生。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下面就四种隔离级别进行场景设计："><span class="nav-number">6.</span> <span class="nav-text">下面就四种隔离级别进行场景设计：</span></a></li></ol></li></div>
             
 
           </div>
